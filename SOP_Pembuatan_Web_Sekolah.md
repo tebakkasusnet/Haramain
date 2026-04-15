@@ -1,96 +1,73 @@
 # 🚀 SOP & Framework Pembuatan Landing Page Sekolah
 
-Dokumen ini merangkum apa yang telah kita selesaikan di **Project Yaspenterufi**, apa saja yang dibutuhkan untuk membuat project serupa di sekolah lain dengan sangat cepat, serta Prompt Master yang bisa kamu *"Copy-Paste"* ke saya (Antigravity) di masa depan.
+Dokumen ini merangkum apa yang telah kita selesaikan pada rentetan project sekolah (contoh: **Yaspenterufi** dan **Al-Haramain**), *Do's and Don'ts* (aturan anti-kesalahan) yang berlaku secara merata di project apapun, serta Prompt Master yang bisa disalin untuk mendelegasikan project web serupa kepada saya di masa mendatang.
 
 ---
 
-## 🏆 1. Rangkuman Pencapaian (Project Yaspenterufi)
-Kita telah berhasil membangun landing page statis tanpa backend yang sangat ringan, super cepat, terfokus pada konversi pendaftaran (PPDB), dan *production-ready*:
-* **Modern UI/UX:** Desain khusus dengan *Glassmorphism*, palet warna spesifik (Medical Blue/Energetic Orange), tipografi modern (Google Fonts), dan hover animasi interaktif.
-* **Layout Adaptif:** Grid bersistem untuk aktivitas (model strip 2 baris x 6 kolom yang stabil), dan sangat responsif ke ukuran tablet/HP.
-* **Performa Bebas Kendala:** Dibuat menggunakan Vanilla HTML/CSS/JS murni. Memanfaatkan `IntersectionObserver` agar elemen muncul (fade-in) mulus saat di-scroll tanpa library eksternal.
-* **Konversi Optimal:** Semua CTA pendaftaran diarahkan secara "Hardcode" via URL menuju WhatsApp CS dan unduhan tombol brosur *(download via <a> attribute)*, menihilkan kebutuhan server atau database tambahan.
-* **Siap Deploy (Vercel-ready):** Struktur aset yang sudah disanitasi (`assets/images/`, `assets/css/`, `assets/js/`), menjadikan repositori sangat teratur dan proses naik *live* di Vercel semudah memencet tombol *import*.
+## 🏆 1. Rangkuman Pencapaian (Project Al-Haramain & Yaspenterufi)
+Kita telah berhasil menyempurnakan alur kerja pembuatan landing page statis tanpa backend yang super cepat, terfokus pada konversi, ringan, dan *production-ready*:
+* **Modern UI/UX:** Pembuatan desain khusus dengan elemen *Glassmorphism*, paduan palet warna berlapis yang solid, dan interaksi animasi sederhana nan estetis.
+* **Vanilla JS Slider Built-in:** Sukses merakit modul *Hero Carousel* yang smooth menggunakan sistem *opacity delay* murni melalui Vanilla JS (tanpa *external dependency*), menjaga ukurannya tetap di bawah `2MB`.
+* **Smart Responsive Grid:** Membangun *layout* yang benar-benar adaptif pada mode HP: komponen berjejer tak lagi sekilas menyempit. Ia menggunakan kaidah sistem grid berlapis: 3 kolom (Desktop) -> 2 kolom (Tablet) -> 1 kolom ramping terpusat ukuran font kecil proporsional (Mobile).
+* **Fixing Logic & Positioning:** Mengatasi problematika flexbox *overlap* (tumpang-tindih) pada *layer* depan layar absolutes, serta penyesuaian khusus media informatif (poster tak berfilter).
 
 ---
 
-## 📦 2. Persiapan Data untuk Project Sekolah Selanjutnya
-Sebelum memulai chat/project sekolah baru berikutnya dengan saya, siapkan bahan peluru ini agar pengerjaan tuntas dalam sekali *Prompt*:
-
-1.  **Aset Branding Asli:** File Logo Sekolah dalam format `PNG Transparan` (tanpa *background* putih).
-2.  **Identitas Warna Khusus:** 1 Warna Utama (Primary) dan 1 Warna Aksen (Secondary/CTA). *(Misal: Emerald Forest & Sunrise Yellow).*
-3.  **Koleksi Foto:** Jangan masukkan foto *low-res*. Kumpulkan minimal 6-12 foto jernih dokumentasi kegiatan siswa atau lingkungan belajar. Buatkan folder `assets/images` dan taruh semuanya di sana agar saya bisa langsung *mapping* namanya.
-4.  **Aset Brosur:** File brosur PDF atau bentuk JPEG tunggal (`brosur.pdf` atau `.jpeg`).
-5.  **Daftar Informasi Mentah / Copywriting Dasar:**
-    * Sebutkan secara eksplisit "Nama Yayasan" dan "Nama Sekolah".
-    * Tahun Berdiri, Akreditasi, dan Angka penting lainnya untuk statistik hero.
-    * Daftar Jurusan Spesifik atau Unit pendidikan yang disediakan dengan deksripsi minimalis(1-2 kalimat).
-    * Target URL WhatsApp penerimaan siswa lengkap.
+## 📦 2. Persiapan Data (Bahan Mentah Project Berikutnya)
+Agar saya bisa langsung bekerja utuh dalam satu kali eksekusi penuh tanpa ragu:
+1.  **Aset Branding:** Kumpulkan aset resolusi jernih seperti Logo di dalam map `/assets/images`.
+2.  **Identitas Brand Cepat:** Cukup tentukan Warna Utama dan Warna Aksen CTA.
+3.  **Koleksi Visual Spesifik:** Berikan keterangan apakah sebuah gambar bersifat "Foto Dokumentasi" (yang mana boleh diberikan efek artistik / gradien hitam gelap), atau gambar "Poster Promosi" (harus bersih polos).
+4.  **Daftar Copywriting Lengkap:** Profil mentah, data moneter/rincian biaya, taglines. Sertakan juga alamat Tautan ke platform lain khusus (WA, IG, YouTube) dengan template otomatisnya.
 
 ---
 
-## ⚙️ 3. Alur Kerja Replikatif Saya (The Antigravity Playbook)
-Jika kamu memicu *Master Prompt* nanti, ini adalah langkah otomatis yang masuk ke "otak" saya sebagai standard framework:
-1.  **[SCAFFOLDING]:** Inisiasi `index.html` dengan *boilerplates* yang matang, injeksi Google Fonts, dan penyematan *Phosphor Icons* CDN.
-2.  **[DESIGN SYSTEM]:** Membangun `style.css` dengan mematok CSS Variables dasar (Warna brand baru, layout spacing, typography modern).
-3.  **[SECTIONING]:** Pembangunan modular -> Beranda *Full Width* -> Info Sekolah Modular -> Panel Jurusan -> *Gallery Strip CSS-Grid* -> Footer navigasi cepat.
-4.  **[WIRING]:** Menyambungkan logikal `main.js`. Khususnya logika `IntersectionObserver` untuk animasi kemunculan elemen.
-5.  **[TESTING]:** Agent otomatis memastikan tidak ada masalah *overlap* posisi absolut/relatif antar layout menggunakan Browser Testing mandiri.
+## ⚠️ 3. ATURAN PENTING: Boleh & Tidak Boleh (DO'S & DON'TS)
+*(Panduan umum agar kita langsung "Tap-In" bekerja optimal, dan tidak perlu lagi mengulang *troubleshooting* letak, responsivitas, atau masalah visual ringan akibat flexbox)*
+
+### ✅ YANG HARUS DILAKUKAN (DO'S)
+* **Mobile-First Data Scaling:** Pada struktur berbentuk kolom banyak (List Ekskul, Rincian Fasilitas, Box Statistik), jangan biarkan grid langsung hancur di *mobile*. Tata per breakpoint: `max-width: 900px` menjadi 2 kolom, dan di `max-width: 480px` menjadi 1 kolom yang WAJIB dibarengi skala pengerutan font (`0.9rem`) dan icon, **agar tidak raksasa memakan layar.**
+* **Pisahkan Efek Foto vs Brosur Berjalan (Poster):**
+  - Terapkan `.hero-bg-overlay` & `filter: brightness()` HANYA untuk background foto abstrak agar tulisan putihnya terbaca.
+  - Namun apabila ada *Asset Poster Brosur/Tulisan*, HILANGKAN/reset (override) filter apapun padanya (`filter: none !important;`). Biarkan transparan, terang sesuai aslinya tanpa lapisan redup.
+* **Penempatan Indikator UI Aman:** Posisikan perintilan navigasi kecil (seperti *titik/dots* carousel) di zona Atas (Top) di bawah header, BUKAN di dasar layar yang dapat membajak tombol *Call to Action* (CTA).
+* **Validasi Ikon Konkrit:** Pastikan penamaan kelas ikon eksternal (contohnya `Phosphor Icons`) benar dan sudah terdaftar eksistensinya secara universal. Jangan berkreasi dengan ID ikon bohongan (seperti `ph-ping-pong` atau `ph-person-arms-spread`) yang jelas berpotensi besar kosong melompong (not rendered).
+
+### ❌ YANG TIDAK BOLEH DILAKUKAN (DON'TS)
+* **Tata Letak Berantakan Terkunci Navbar (Overlap):** Dilarang melupakan bahwa *header web (navbar)* sering bersifat posisi tetap (Sticky). Saat memposisikan komponen berbau absolut ke *mid-screen*/tengah, berikan jaminan `padding-top: 100px` ekstra longgar kepada wrapper kontennya supaya kata pertama di judul teks tak menyangkut tertimpa navigasi!
+* **Box Stat Mengambang di Luar Konteks:** Dilarang merajut box statistik (Stats Bar) pada tag terluar dari modul grid. Bungkus/letakkan erat secara hierarki di bawah jejeran tombol/title agar selalu bergerak naik-turun bersama dan tidak secara tidak sengaja menutupi kalimat penting. 
+* **Menghapus Atribut Default Fungsi CTA:** Jangan kelupaan atribut vital semacam fungsi `download` pada tombol tautan brosur, atau parameter `?text=` pada URL WhatsApp.
 
 ---
 
-## 🛡️ 4. Aturan Validasi Khusus (Instruksi Tambahan)
-*(Aturan wajib ini ditambahkan untuk memastikan fungsionalitas dan layout web tetap sempurna tanpa revisi berulang)*
-* **Fungsi Autodownload:** Tombol unduh brosur WAJIB menggunakan atribut `download` pada tag `<a>` sehingga file langsung tersimpan ke perangkat pengguna, bukan sekadar membuka tab baru.
-* **Integrasi Pesan WA Otomatis:** URL WhatsApp harus selalu menyertakan pre-filled text (parameter `?text=`).
-* **Optimalisasi Resolusi Foto:** Jika foto buram, aplikasikan penyesuaian via CSS (seperti filter brightness/contrast). Diperbolehkan menduplikasi foto yang sama jika stok aset foto kurang.
-* **Pengembangan Konten Estetik:** Diizinkan mengembangkan data valid yang ada menjadi *copywriting* tambahan yang menarik agar website terlihat lebih profesional.
-* **Keamanan Margin & Spacing:** Perhatikan ekstra pada margin/padding kanan-kiri. Jangan sampai ada elemen, *assets*, atau teks yang saling tumpang tindih atau terlalu mepet ke ujung layar.
-* **Optimalisasi Handphone (Mobile-First):** Wajib mengutamakan tampilan UI di layar HP.
-* **Validasi Link Eksternal:** Pastikan tombol media sosial (Instagram dan YouTube) terhubung ke link yang tepat dan aktif.
-* **Zero Mistake / Ask First:** Jika ada keraguan terkait tata letak atau data pendukung, agen (saya) diwajibkan bertanya terlebih dahulu untuk konfirmasi sebelum menyusun kode.
+## 🎯 4. THE MASTER PROMPT (Antigravity Smart Edition)
 
----
-
-## 🎯 5. THE MASTER PROMPT (Copy-Paste Ini Sesuka Hati)
-
-Simpan teks (kotak di bawah) ini pada catatanmu. Kapanpun kamu siap membuat project landing page untuk instansi/sekolah lain, sediakan satu folder kosong berisi foto-foto dan jalankan Prompt ini kepada saya:
+*(Salin teks prompt di bawah ini bersama penyesuaian detail kapanpun Anda butuh mendelegasikan project baru kepada saya tanpa banyak basa-basi)*
 
 ```text
 Act as a Senior Web Developer, UI/UX Expert, & Art Director.
-Saya mau kamu buatkan Landing Page Statis (Vanilla HTML/CSS/JS) untuk PPDB Sekolah baru. Hindari Tailwind/React, buat strukturnya siap deploy Vercel (semua gambar sudah ada di assets/images).
+Tugas: Buat Landing Page Statis (Vanilla HTML/CSS/JS) untuk Instansi [Ubah: Jenis Bisnis / Sekolah]. Target utama adalah kecepatan, struktur rapi, siap deployment statis secara langsung. Terkait layout, baca kembali panduan DO's & DON'TS dari memory dokumentasi SOP kita!
 
-[DATA & KONTEKS SEKOLAH]
-- Nama Yayasan: [Isi Nama Yayasan]
-- Instansi/Unit: [Isi Nama Sekolah/Banyak Jenjang]
-- WhatsApp PPDB: [Isi No WA penuh]
-- Template Pesan WA: [Contoh: "Assalamu'alaikum, saya ingin bertanya terkait Pendaftaran..."]
-- Link Instagram: [Isi URL IG]
-- Link YouTube: [Isi URL YT]
-- File Unduhan Brosur: [Contoh: assets/brosur.pdf]
-- Tagline Spesifik: [Misal: "Cerdas, Mandiri, dan Berakhlak Mulia"]
-- Ciri Khas/Target: [Misal: Modern Islamic Boarding School / Vocational Engineering]
+[DATA & KONTEKS INSTANSI TERBARU]
+- Profil / Nama: [Isi Nama Yayasan / Sekolah]
+- Target Copywriting / Value : [Berikan poin penjualan penting, misal: Hafidz Qur'an 5 Bulan, dll]
+- Tautan CTA Utama / WA: [Isi Link WA lengkap dengan format presetting message]
+- Sosial Media: Instagram [URL IG] , Channel YouTube [URL YT]
+- Rincian Tabel: [Lampirkan daftar harga komponen pendukung yang panjang, misal Rincian Biaya / Rincian Jam Layanan]
+- Aset Visual (Folder `assets/`): Ada File dokumentasi foto biasa dan ada Poster Promo murni. Bedakan implementasinya sesuai standar panduan UX (Poster tak boleh kena efek filter gelap).
 
-[PANDUAN DESAIN & FUNGSI WAJIB]
-- UI Vibe: Highly Premium, Bersih, Dinamis, Modern. Terapkan Micro-animations saat hover, efek Glassmorphism untuk navbar/cards statis, dan border-radius/bayangan.
-- Warna Primary (Kode HEX/Nama): [Contoh: Biru Muda #3B82F6]
-- Warna Secondary/CTA: [Contoh: Oranye Solid]
-- Tipografi: Padukan Outfit (Heading) & Inter (Body) atau kombinasi selaras lain dari Google Fonts.
-- Layout Safety: Perhatikan margin kanan-kirinya! Beri padding/margin yang proporsional agar tidak terlalu dekat/mepet layar dan mencegah informasi tertimpa. Wajib optimalisasi sempurna untuk handphone.
-- Handling Aset: Kembangkan tampilan sedemikian rupa, gunakan filter/enhance jika foto resolusinya kurang bagus. Gunakan foto duplikat jika stok kurang.
-- Copywriting: Kembangkan poin informasi valid yang ada menjadi teks tambahan yang memikat.
-- Validasi: Jangan sampai ada kesalahan. Jikalau ragu, kamu wajib bertanya ke saya untuk konfirmasi.
+[PANDUAN DESAIN & KONDISIONAL WAJIB (MUST DO)]
+1. UX Vibe & Tone Warna: UI harus memukau, nuansa transparan (Glassmorphism), dan diwarnai solid oleh [*Warna Utama misal: Biru Laut #00A3FF, Aksen Oranye Solid*]. 
+2. Tata Letak Anti Overlap: Pastikan wadah tulisan pahlawan / title headline dikurung margin `padding-top` masif agar tidak nabrak Navbar atas! 
+3. Layout Carousel Bersih: Fitur Slider dikerjakan menggunakan Vanilla JS utuh (smooth cross-fade opacity limit interval 5-7 detik). Tempatkan Titik slider sejauh mungkin di area kepala, jangan menyentuh CTA daftar.
+4. Degradasi Mobile Grid (Vital): Saya melarang grid dari 3 kolom langsung menciut jadi 1 baris lebar secara konyol. Gunakan Breakpoints untuk 900px down-scaling 2 columns. Pada HP (480px) down-scaling 1 column namun teks font rems dibilaskan `0.9` ke bawah dengan ikon ringkas.
+5. Verifikasi Komponen: Pastikan class icon eksternal akurat. Jika tidak yakin rupa sebuah ikon, gunakan list font paling standar (`ph-user`, `ph-book-open`, dsb). Jangan asal merangkai penamaan. Tulis copywriting tambahan mendampingi detail mentah yang sudah saya suapkan.
 
-[STRUKTUR SEKSI]
-1. Header/Navbar: Sticky dengan efek Glass. Pastikan link sosial media (Instagram & YouTube) terhubung dengan benar.
-2. Hero Banner: Sangat atraktif. Heading besar, tombol CTA ganda. Tombol 1 terhubung WA dengan auto-template message. Tombol 2 bersifat Autodownload file brosur. Tambahkan "Stats Bar" mengambang rapi persis di bawahnya (Tahun, Akreditasi, Total Jurusan).
-3. Tentang Instansi: Dua kolom -> 1 Foto resolusi tinggi (dengan frame modern) vs Text deksriptif poin keunggulan instansi.
-4. Program Jenjang / Jurusan: Kartu-kartu Grid bersusunan rapi.
-5. Galeri Ekstrakurikuler: Wajib gunakan arsitektur "CSS Grid Strip Layout" padat (horizontal menyambung rapat seperti dokumentasi sebelumnya) berjejer 2 baris.
-6. Penutup (PPDB Banner & Footer Minimalist). Pastikan tautan IG dan YT sudah sinkron.
+Tugas Auto-Run Penuh Anda: 
+Langsung tulis dan generasikan modul *file* dengan utuh:
+1. `index.html` (Kerangka konten menyeluruh lengkap semantik dan logic button-nya).
+2. `assets/css/style.css` (Terapkan logic rulesets spacing anti bertabrakan (overlap) dan root variablenya).
+3. `assets/js/main.js` (Counter dinamis dan modul slider).
 
-Kamu sepenuhnya diizinkan auto-run. Langsung generasikan file:
-1. `index.html` (Terintegrasi utuh dengan atribut download dan WA url params)
-2. `assets/css/style.css` (Lengkap variables, layout margin aman, intersection observer classes, responsif max 480px, grid layout stabil)
-3. `assets/js/main.js` (Logika smooth-scroll & scroll listener)
-Analisis dan sesuaikan nama-nama path gambar sesempurna mungkin!
+Make it perfect execution in One Shot. Jangan mengulangi loop revisi. Konfirmasi ke saya jika masih ada missing puzzle.
+```
