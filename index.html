@@ -115,12 +115,47 @@
               <span>Download Brosur</span>
             </a>
           </div>
+
+          <!-- STATS BAR — Moved inside slide 1 to avoid flexbox overlap -->
+          <div class="hero-stats" id="heroStats" style="margin-top: 48px; position:relative; z-index:10; max-width:940px; margin-left:auto; margin-right:auto;">
+            <div class="hero-stats-inner">
+              <div class="stat-item reveal-scale stagger-1">
+                <div class="stat-icon">
+                  <i class="ph ph-calendar-check"></i>
+                </div>
+                <div class="stat-number">Est. 2024</div>
+                <div class="stat-label">Tahun Berdiri</div>
+              </div>
+              <div class="stat-item reveal-scale stagger-2">
+                <div class="stat-icon">
+                  <i class="ph ph-graduation-cap"></i>
+                </div>
+                <div class="stat-number">Modern KMI</div>
+                <div class="stat-label">Sistem Pendidikan</div>
+              </div>
+              <div class="stat-item reveal-scale stagger-3">
+                <div class="stat-icon">
+                  <i class="ph ph-globe-hemisphere-west"></i>
+                </div>
+                <div class="stat-number" data-count="2" data-suffix=" Bahasa">2 Bahasa</div>
+                <div class="stat-label">Bilingual Program</div>
+              </div>
+              <div class="stat-item reveal-scale stagger-4">
+                <div class="stat-icon">
+                  <i class="ph ph-users"></i>
+                </div>
+                <div class="stat-number" data-count="22" data-suffix=" Guru">22 Guru</div>
+                <div class="stat-label">Tenaga Pengajar</div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
       <!-- SLIDE 2 -->
       <div class="hero-slide">
         <div class="hero-bg-image poster-bg" style="background:#022c22; display:flex; justify-content:center; align-items:center;">
-          <img src="assets/images/poster-ppdb.png" alt="Poster PPDB Al-Haramain" style="max-height: 90vh; width: auto; max-width: 100%; object-fit: contain; margin-top:20px;">
+          <img src="assets/poster-ppdb.jpeg" alt="Poster PPDB Al-Haramain" style="max-height: 90vh; width: auto; max-width: 100%; object-fit: contain; margin-top:20px;">
         </div>
         <div class="hero-slide-cta" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 10;">
           <a href="https://wa.me/6281360701367?text=Assalamu'alaikum%20Buya%20Fadlan,%20saya%20ingin%20bertanya%20terkait%20pendaftaran%20santri%20baru%20di%20Al-Haramain%20untuk%20Tahun%20Ajaran%202026/2027..." 
@@ -138,39 +173,20 @@
       <button class="indicator" data-slide="1" aria-label="Slide 2"></button>
     </div>
 
-      <!-- STATS BAR — now inside the flow, not absolute -->
-      <div class="hero-stats" id="heroStats">
-        <div class="hero-stats-inner">
-          <div class="stat-item reveal-scale stagger-1">
-            <div class="stat-icon">
-              <i class="ph ph-calendar-check"></i>
-            </div>
-            <div class="stat-number">Est. 2024</div>
-            <div class="stat-label">Tahun Berdiri</div>
-          </div>
-          <div class="stat-item reveal-scale stagger-2">
-            <div class="stat-icon">
-              <i class="ph ph-graduation-cap"></i>
-            </div>
-            <div class="stat-number">Modern KMI</div>
-            <div class="stat-label">Sistem Pendidikan</div>
-          </div>
-          <div class="stat-item reveal-scale stagger-3">
-            <div class="stat-icon">
-              <i class="ph ph-globe-hemisphere-west"></i>
-            </div>
-            <div class="stat-number" data-count="2" data-suffix=" Bahasa">2 Bahasa</div>
-            <div class="stat-label">Bilingual Program</div>
-          </div>
-          <div class="stat-item reveal-scale stagger-4">
-            <div class="stat-icon">
-              <i class="ph ph-users"></i>
-            </div>
-            <div class="stat-number" data-count="22" data-suffix=" Guru">22 Guru</div>
-            <div class="stat-label">Tenaga Pengajar</div>
-          </div>
-        </div>
-      </div>
+    <!-- Decorative floating shapes -->
+    <div class="hero-float-shape"></div>
+    <div class="hero-float-shape"></div>
+    <div class="hero-float-shape"></div>
+
+    <div class="hero-ornament-star" style="top:18%;left:6%;">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 0L48.9 31.1L80 40L48.9 48.9L40 80L31.1 48.9L0 40L31.1 31.1L40 0Z" fill="#D97706" opacity="0.15"/>
+      </svg>
+    </div>
+    <div class="hero-ornament-star" style="bottom:25%;right:6%;">
+      <svg width="50" height="50" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 0L48.9 31.1L80 40L48.9 48.9L40 80L31.1 48.9L0 40L31.1 31.1L40 0Z" fill="#FFFFFF" opacity="0.1"/>
+      </svg>
     </div>
   </section>
 
@@ -443,11 +459,11 @@
           
           <div class="ekskul-grid">
             <div class="ekskul-card">
-              <div class="ekskul-icon"><i class="ph ph-drum"></i></div>
+              <div class="ekskul-icon"><i class="ph ph-megaphone"></i></div>
               <h4>Marching Band</h4>
             </div>
             <div class="ekskul-card">
-              <div class="ekskul-icon"><i class="ph ph-person-arms-spread"></i></div>
+              <div class="ekskul-icon"><i class="ph ph-shield-check"></i></div>
               <h4>Silat (Pencak Silat)</h4>
             </div>
             <div class="ekskul-card">
@@ -459,7 +475,7 @@
               <h4>Hadroh</h4>
             </div>
             <div class="ekskul-card">
-              <div class="ekskul-icon"><i class="ph ph-book-open-text"></i></div>
+              <div class="ekskul-icon"><i class="ph ph-book-open"></i></div>
               <h4>Tilawah (Seni Baca Al-Quran)</h4>
             </div>
             <div class="ekskul-card">
@@ -471,7 +487,7 @@
               <h4>Voli</h4>
             </div>
             <div class="ekskul-card">
-              <div class="ekskul-icon"><i class="ph ph-ping-pong"></i></div>
+              <div class="ekskul-icon"><i class="ph ph-medal"></i></div>
               <h4>Tenis Meja</h4>
             </div>
             <div class="ekskul-card">
