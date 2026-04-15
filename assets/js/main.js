@@ -228,4 +228,40 @@ document.addEventListener('DOMContentLoaded', () => {
     navbar.classList.remove('scrolled');
   }
 
+  // === HERO SLIDER ===
+  const slides = document.querySelectorAll('.hero-slide');
+  const indicators = document.querySelectorAll('.hero-slider-indicators .indicator');
+  let currentSlide = 0;
+  let slideInterval;
+
+  function goToSlide(index) {
+    if (slides.length === 0) return;
+    slides[currentSlide].classList.remove('active');
+    if(indicators[currentSlide]) indicators[currentSlide].classList.remove('active');
+    
+    currentSlide = index;
+    
+    slides[currentSlide].classList.add('active');
+    if(indicators[currentSlide]) indicators[currentSlide].classList.add('active');
+  }
+
+  function nextSlide() {
+    if (slides.length === 0) return;
+    let nextIndex = (currentSlide + 1) % slides.length;
+    goToSlide(nextIndex);
+  }
+
+  if (slides.length > 0) {
+    // 6 seconds duration
+    slideInterval = setInterval(nextSlide, 6000);
+
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        clearInterval(slideInterval);
+        goToSlide(index);
+        slideInterval = setInterval(nextSlide, 6000);
+      });
+    });
+  }
+
 });

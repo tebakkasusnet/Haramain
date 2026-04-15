@@ -2458,3 +2458,119 @@ h1, h2, h3, h4, h5, h6 {
     transparent 100%);
   opacity: 0.15;
 }
+
+/* === HERO SLIDER === */
+.hero-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.hero-slider-indicators {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .hero-slider-indicators {
+    bottom: 40px;
+  }
+}
+
+.hero-slider-indicators .indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: var(--transition-base);
+  padding: 0;
+}
+
+.hero-slider-indicators .indicator.active {
+  background: var(--secondary);
+  transform: scale(1.3);
+}
+
+/* === EKSKUL GRID === */
+.advantage-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.ekskul-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .ekskul-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ekskul-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-base);
+}
+
+.ekskul-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(217, 119, 6, 0.3);
+}
+
+.ekskul-icon {
+  font-size: 2.2rem;
+  color: var(--secondary-light);
+  margin-bottom: 12px;
+  background: rgba(217, 119, 6, 0.1);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.ekskul-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin: 0;
+}

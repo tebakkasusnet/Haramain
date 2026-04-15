@@ -83,63 +83,60 @@
        HERO SECTION — with Background Image
        ============================================= -->
   <section class="hero" id="beranda">
-    <!-- Background Image Layer -->
-    <div class="hero-bg-image">
-      <img src="assets/Kegiatan (4).jpeg" alt="Pesantren Al-Haramain Rantauprapat" width="1920" height="1080">
-    </div>
-    <!-- Gradient Overlay on top of image -->
-    <div class="hero-bg-gradient"></div>
-    <!-- Geometric Pattern -->
-    <div class="hero-bg-overlay"></div>
-
-    <!-- Decorative floating shapes -->
-    <div class="hero-float-shape"></div>
-    <div class="hero-float-shape"></div>
-    <div class="hero-float-shape"></div>
-
-    <!-- Ornamental SVG stars -->
-    <div class="hero-ornament-star" style="top:18%;left:6%;">
-      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M40 0L48.9 31.1L80 40L48.9 48.9L40 80L31.1 48.9L0 40L31.1 31.1L40 0Z" fill="#D97706" opacity="0.15"/>
-      </svg>
-    </div>
-    <div class="hero-ornament-star" style="bottom:25%;right:6%;">
-      <svg width="50" height="50" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M40 0L48.9 31.1L80 40L48.9 48.9L40 80L31.1 48.9L0 40L31.1 31.1L40 0Z" fill="#FFFFFF" opacity="0.1"/>
-      </svg>
-    </div>
-
-    <div class="container">
-      <div class="hero-badge">
-        <i class="ph ph-mosque"></i>
-        PPDB Tahun Ajaran 2026/2027
+    <div class="hero-slider" id="heroSlider">
+      <!-- SLIDE 1 -->
+      <div class="hero-slide active">
+        <div class="hero-bg-image">
+          <img src="assets/Kegiatan (4).jpeg" alt="Pesantren Al-Haramain Rantauprapat" width="1920" height="1080">
+        </div>
+        <div class="hero-bg-gradient"></div>
+        <div class="hero-bg-overlay"></div>
+        <div class="container">
+          <div class="hero-badge">
+            <i class="ph ph-mosque"></i>
+            PPDB Tahun Ajaran 2026/2027
+          </div>
+          <h1 class="hero-title">
+            Membangun<br><span>Peradaban Qur'ani</span>
+          </h1>
+          <p class="hero-description">
+            Pesantren Modern & Tahfizh Al-Haramain Rantauprapat hadir dengan sistem pendidikan berkualitas 
+            berbasis KMI Gontor dan fokus bilingual Arab-Inggris, membentuk generasi Qur'ani yang siap 
+            memimpin peradaban di kancah global.
+          </p>
+          <div class="hero-cta-group">
+            <a href="https://wa.me/6281360701367?text=Assalamu'alaikum%20Buya%20Fadlan,%20saya%20ingin%20bertanya%20terkait%20pendaftaran%20santri%20baru%20di%20Al-Haramain%20untuk%20Tahun%20Ajaran%202026/2027..." 
+               target="_blank" rel="noopener" class="btn btn-primary" id="heroCTAWhatsapp">
+              <i class="ph ph-whatsapp-logo"></i>
+              <span>Daftar via WhatsApp</span>
+            </a>
+            <a href="assets/Brosur Ponpes Al-Haramain.pdf" download class="btn btn-outline" id="heroCTABrosur">
+              <i class="ph ph-download-simple"></i>
+              <span>Download Brosur</span>
+            </a>
+          </div>
+        </div>
       </div>
-
-      <h1 class="hero-title">
-        Membangun<br><span>Peradaban Qur'ani</span>
-      </h1>
-
-      <p class="hero-tagline">
-        ✦ Cerdas, Mandiri, dan Berakhlak Mulia ✦
-      </p>
-
-      <p class="hero-description">
-        Pesantren Modern & Tahfizh Al-Haramain Rantauprapat hadir dengan sistem pendidikan berkualitas 
-        berbasis KMI Gontor dan fokus bilingual Arab-Inggris, membentuk generasi Qur'ani yang siap 
-        memimpin peradaban di kancah global.
-      </p>
-
-      <div class="hero-cta-group">
-        <a href="https://wa.me/6281360701367?text=Assalamu'alaikum%20Buya%20Fadlan,%20saya%20ingin%20bertanya%20terkait%20pendaftaran%20santri%20baru%20di%20Al-Haramain%20untuk%20Tahun%20Ajaran%202026/2027..." 
-           target="_blank" rel="noopener" class="btn btn-primary" id="heroCTAWhatsapp">
-          <i class="ph ph-whatsapp-logo"></i>
-          <span>Daftar via WhatsApp</span>
-        </a>
-        <a href="assets/Brosur Ponpes Al-Haramain.pdf" download class="btn btn-outline" id="heroCTABrosur">
-          <i class="ph ph-download-simple"></i>
-          <span>Download Brosur</span>
-        </a>
+      <!-- SLIDE 2 -->
+      <div class="hero-slide">
+        <div class="hero-bg-image poster-bg" style="background:#022c22; display:flex; justify-content:center; align-items:center;">
+          <img src="assets/images/poster-ppdb.png" alt="Poster PPDB Al-Haramain" style="max-height: 90vh; width: auto; max-width: 100%; object-fit: contain; margin-top:20px;">
+        </div>
+        <div class="hero-slide-cta" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 10;">
+          <a href="https://wa.me/6281360701367?text=Assalamu'alaikum%20Buya%20Fadlan,%20saya%20ingin%20bertanya%20terkait%20pendaftaran%20santri%20baru%20di%20Al-Haramain%20untuk%20Tahun%20Ajaran%202026/2027..." 
+             target="_blank" rel="noopener" class="btn btn-primary" style="box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+            <i class="ph ph-whatsapp-logo"></i>
+            <span>Daftar Sekarang</span>
+          </a>
+        </div>
       </div>
+    </div>
+    
+    <!-- Slider Indicators -->
+    <div class="hero-slider-indicators" id="heroSliderIndicators">
+      <button class="indicator active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="indicator" data-slide="1" aria-label="Slide 2"></button>
+    </div>
 
       <!-- STATS BAR — now inside the flow, not absolute -->
       <div class="hero-stats" id="heroStats">
@@ -405,32 +402,8 @@
           </div>
         </div>
 
-        <!-- Self Development -->
-        <div class="advantage-card reveal stagger-2">
-          <div class="advantage-card-header">
-            <div class="advantage-card-icon">
-              <i class="ph ph-rocket-launch"></i>
-            </div>
-            <h3>
-              Self-Development & Ekskul
-              <span>Pengembangan Diri Menyeluruh</span>
-            </h3>
-          </div>
-          <p>
-            Al-Haramain menyediakan berbagai kegiatan ekstrakurikuler yang dirancang untuk 
-            mengasah bakat, minat, dan softskill santri secara komprehensif.
-          </p>
-          <div class="advantage-features">
-            <span class="advantage-feature-tag"><i class="ph-fill ph-check-circle"></i> Pramuka</span>
-            <span class="advantage-feature-tag"><i class="ph-fill ph-check-circle"></i> Olahraga</span>
-            <span class="advantage-feature-tag"><i class="ph-fill ph-check-circle"></i> Kaligrafi</span>
-            <span class="advantage-feature-tag"><i class="ph-fill ph-check-circle"></i> Public Speaking</span>
-            <span class="advantage-feature-tag"><i class="ph-fill ph-check-circle"></i> Leadership Camp</span>
-          </div>
-        </div>
-
         <!-- Character Building -->
-        <div class="advantage-card reveal stagger-3">
+        <div class="advantage-card reveal stagger-2">
           <div class="advantage-card-header">
             <div class="advantage-card-icon">
               <i class="ph ph-heart-half"></i>
@@ -452,26 +425,59 @@
           </div>
         </div>
 
-        <!-- Alumni Network -->
-        <div class="advantage-card reveal stagger-4">
-          <div class="advantage-card-header">
-            <div class="advantage-card-icon">
-              <i class="ph ph-globe-hemisphere-west"></i>
+        <!-- Self Development (Full Width Grid) -->
+        <div class="advantage-card full-width reveal stagger-3" id="ekskulCard">
+          <div class="advantage-card-header" style="justify-content: center; text-align: center; flex-direction: column;">
+            <div class="advantage-card-icon" style="margin: 0 auto 10px;">
+              <i class="ph ph-rocket-launch"></i>
             </div>
-            <h3>
-              Jaringan Global
-              <span>Koneksi Alumni Internasional</span>
+            <h3 style="font-size:1.6rem;">
+              Self-Development & Ekskul
+              <span style="font-size:1rem; margin-top:8px;">Pengembangan Diri Menyeluruh</span>
             </h3>
           </div>
-          <p>
-            Pimpinan alumni Al-Azhar Mesir membuka akses ke jaringan pendidikan tinggi 
-            internasional dan pondok-pondok modern se-Indonesia.
+          <p style="text-align: center; max-width: 600px; margin: 0 auto 30px;">
+            Al-Haramain menyediakan berbagai kegiatan ekstrakurikuler yang dirancang untuk 
+            mengasah bakat, minat, dan softskill santri secara komprehensif.
           </p>
-          <div class="advantage-features">
-            <span class="advantage-feature-tag"><i class="ph-fill ph-check-circle"></i> Jalur Al-Azhar</span>
-            <span class="advantage-feature-tag"><i class="ph-fill ph-check-circle"></i> Beasiswa Luar Negeri</span>
-            <span class="advantage-feature-tag"><i class="ph-fill ph-check-circle"></i> Jaringan Gontor</span>
-            <span class="advantage-feature-tag"><i class="ph-fill ph-check-circle"></i> PTN Dalam Negeri</span>
+          
+          <div class="ekskul-grid">
+            <div class="ekskul-card">
+              <div class="ekskul-icon"><i class="ph ph-drum"></i></div>
+              <h4>Marching Band</h4>
+            </div>
+            <div class="ekskul-card">
+              <div class="ekskul-icon"><i class="ph ph-person-arms-spread"></i></div>
+              <h4>Silat (Pencak Silat)</h4>
+            </div>
+            <div class="ekskul-card">
+              <div class="ekskul-icon"><i class="ph ph-soccer-ball"></i></div>
+              <h4>Futsal</h4>
+            </div>
+            <div class="ekskul-card">
+              <div class="ekskul-icon"><i class="ph ph-music-notes"></i></div>
+              <h4>Hadroh</h4>
+            </div>
+            <div class="ekskul-card">
+              <div class="ekskul-icon"><i class="ph ph-book-open-text"></i></div>
+              <h4>Tilawah (Seni Baca Al-Quran)</h4>
+            </div>
+            <div class="ekskul-card">
+              <div class="ekskul-icon"><i class="ph ph-tennis-ball"></i></div>
+              <h4>Badminton</h4>
+            </div>
+            <div class="ekskul-card">
+              <div class="ekskul-icon"><i class="ph ph-volleyball"></i></div>
+              <h4>Voli</h4>
+            </div>
+            <div class="ekskul-card">
+              <div class="ekskul-icon"><i class="ph ph-ping-pong"></i></div>
+              <h4>Tenis Meja</h4>
+            </div>
+            <div class="ekskul-card">
+              <div class="ekskul-icon"><i class="ph ph-tent"></i></div>
+              <h4>Paskibra & Pramuka</h4>
+            </div>
           </div>
         </div>
       </div>
@@ -559,7 +565,7 @@
         <img src="assets/Kegiatan (1).jpeg" alt="Kegiatan Santri Al-Haramain" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="assets/Kegiatan (2).jpeg" alt="Kegiatan Santri Al-Haramain" loading="lazy">
+        <img src="assets/Kegiatan (18).jpeg" alt="Kegiatan Santri Al-Haramain" loading="lazy">
       </div>
       <div class="gallery-item">
         <img src="assets/Kegiatan (3).jpeg" alt="Kegiatan Santri Al-Haramain" loading="lazy">
@@ -580,13 +586,13 @@
         <img src="assets/Kegiatan (9).jpeg" alt="Kegiatan Santri Al-Haramain" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="assets/Kegiatan (11).jpeg" alt="Kegiatan Santri Al-Haramain" loading="lazy">
+        <img src="assets/Kegiatan (10).jpeg" alt="Kegiatan Santri Al-Haramain" loading="lazy">
       </div>
       <div class="gallery-item">
         <img src="assets/Kegiatan (12).jpeg" alt="Kegiatan Santri Al-Haramain" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="assets/Kegiatan (13).jpeg" alt="Kegiatan Santri Al-Haramain" loading="lazy">
+        <img src="assets/Kegiatan (22).jpeg" alt="Kegiatan Santri Al-Haramain" loading="lazy">
       </div>
       <div class="gallery-item">
         <img src="assets/Kegiatan (14).jpeg" alt="Kegiatan Santri Al-Haramain" loading="lazy">
