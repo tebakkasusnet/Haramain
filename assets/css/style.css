@@ -2504,6 +2504,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 100px;
 }
 
 .hero-slide.active {
@@ -2520,13 +2521,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-slider-indicators {
-  position: absolute;
-  top: 110px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  display: flex;
-  gap: 12px;
+  display: none !important;
 }
 
 @media (max-width: 768px) {
