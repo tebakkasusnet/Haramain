@@ -831,6 +831,29 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
+/* Mobile responsive for stats */
+@media (max-width: 900px) {
+  .hero-stats-inner {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 20px;
+  }
+  .stat-item:nth-child(2)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-stats-inner {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 16px;
+  }
+  .stat-item::after {
+    display: none; /* hide vertical lines on mobile column */
+  }
+}
+
 /* =============================================
    ABOUT SECTION
    ============================================= */
@@ -2489,9 +2512,16 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2;
 }
 
+.poster-bg img {
+  filter: none !important;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .hero-slider-indicators {
   position: absolute;
-  bottom: 80px;
+  top: 110px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -2501,7 +2531,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .hero-slider-indicators {
-    bottom: 40px;
+    top: 90px;
   }
 }
 
@@ -2531,9 +2561,27 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .ekskul-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
   .ekskul-grid {
     grid-template-columns: 1fr;
+  }
+  .ekskul-card {
+    padding: 18px !important;
+  }
+  .ekskul-icon {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 8px !important;
+  }
+  .ekskul-card h4 {
+    font-size: 0.9rem !important;
   }
 }
 
