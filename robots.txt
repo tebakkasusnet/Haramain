@@ -1,0 +1,8 @@
+# Pesantren Modern & Tahfizh Al-Haramain Rantauprapat
+# https://www.pesantrenal-haramain.com/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.pesantrenal-haramain.com/sitemap.xml
